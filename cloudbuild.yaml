@@ -11,13 +11,19 @@ steps:
 
     if [ "$BRANCH_NAME" == "development" ]
     then
+      gsutil ls -b gs://${_DEV_BUCKET} || gsutil mb -l ASIA gs://${_DEV_BUCKET}
       gsutil rsync /schemas ${_DEV_BUCKET}
+
     elif [ "$BRANCH_NAME" == "stage" ]
     then
+      gsutil ls -b gs://${_STAGE_BUCKET} || gsutil mb -l ASIA gs://${_STAGE_BUCKET}
       gsutil rsync /schemas ${_STAGE_BUCKET}
+
     elif [ "$BRANCH_NAME" == "production" ]
     then
+      gsutil ls -b gs://${_PROD_BUCKET} || gsutil mb -l ASIA gs://${_PROD_BUCKET}
       gsutil rsync /schemas ${_PROD_BUCKET}
+
     else
       echo "Invalid branch name: $BRANCH_NAME"
       exit 1
