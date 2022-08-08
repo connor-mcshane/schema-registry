@@ -156,3 +156,6 @@ class TestSchemaRegistry(unittest.TestCase):
         self.assertEqual("cool-person", schema.id)
         self.assertEqual("1.0.0", schema.version)
         self.assertEqual("4fd527554f00f7742d2f03330569dcb9d2dd2979", schema.hash)
+
+if __name__ == '__main__':
+    unittest.main()

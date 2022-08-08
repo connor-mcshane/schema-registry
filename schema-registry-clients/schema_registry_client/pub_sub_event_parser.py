@@ -42,5 +42,5 @@ class PubSubJsonEvent:
 
         attributes = self.envelope_decoded["message"].get("attributes")
         if attributes:
-            self.id: str = attributes.get("schema_hash_id").lower()
+            self.schema_id: str = attributes.get("schema_hash_id").lower()
             self.version: int = int(float(attributes.get("version", 1)))
