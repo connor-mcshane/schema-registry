@@ -1,0 +1,7 @@
+# Function dependencies, for example:
+# package>=version
+
+google-cloud-storage==1.43.0
+python-dateutil==2.8.2
+jsonschema
+avro-validator

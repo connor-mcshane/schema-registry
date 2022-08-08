@@ -1,0 +1,25 @@
+{
+  "id": "cool-person",
+  "version": "1.0.0",
+  "hash": "bb91c8f9fab6a004df95fc33df9a11ccd745290c",
+  "data_type": "AVRO",
+  "schema": {
+    "name": "MyClass",
+    "type": "record",
+    "namespace": "com.acme.avro",
+    "fields": [
+      {
+        "name": "firstName",
+        "type": "string"
+      },
+      {
+        "name": "lastName",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "int"
+      }
+    ]
+  }
+}
